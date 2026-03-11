@@ -740,7 +740,7 @@ function StartGame(){
         let missionObject = new Missions(width * newPosX, height * newPosY, object);
         newPosX += 0.1;
         if (newPosX > 1){
-            newPosY += 0.17
+            newPosY += 0.25
             newPosX = 0.62
         }
     }
@@ -750,4 +750,5 @@ function StartGame(){
 UpdateUI()
 
 Loop();
+
 
