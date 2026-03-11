@@ -114,6 +114,21 @@ let missionList = [
             money += 40000
         }
     },
+    {//3
+        name: {korean: "억만장자", english: "billionaire"},
+        value: {korean: "1억 달러를 소지하세요", english: "Have $100 million "},
+        resultValue: "$5000000",
+        successCondition: function(){
+            if (!this.isSuccess && money >= 100000000){
+                return true;
+            }
+            return false;
+        },
+        isSuccess: false,
+        result: function(){
+            money += 5000000
+        }
+    },
 ]
 const borderRadius = 10;
 const levelOfSalesPrice = [0,50,100,200,400,800,1600,3200,6700,11390,19363,32917,55959,95130,
@@ -733,4 +748,5 @@ function StartGame(){
     InGameLoop();
 }
 UpdateUI()
+
 Loop();
